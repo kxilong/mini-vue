@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": "67"
+        },
+        "useBuiltIns": "usage",
+        "corejs": {
+          "version": 2,
+          "proposals": true 
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "syntax-dynamic-import"
+  ]
+}
