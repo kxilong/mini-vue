@@ -1,18 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { observe } from './core/observer'
+import Watcher from './core/observer/Watcher'
 
-class App extends React.Component {
-    componentDidMount() {
-        console.log(process.env.NODE_ENV);
-        // console.log(createHeading())
-    }
-    render() {
-        return (
-            <div>
-                111
-            </div>
-        )
-    }
+let obj = {
+    a: {
+        m: {
+            n: 1
+        }
+    },
+    b: [1, 2, 3, 4, [1, 1]]
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+observe(obj)
+new Watcher(obj, 'a.m.n', (value) => {
+    console.log("☆☆☆☆☆☆", value);
+})
+obj.a.m.n = 88
