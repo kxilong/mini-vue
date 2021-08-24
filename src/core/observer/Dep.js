@@ -1,7 +1,6 @@
 var uid = 0;
 export default class Dep {
     constructor() {
-        console.log("我是DEP类的构造器");
         this.id = uid++
         /**
          * 用数组存储自己的订阅者
@@ -23,7 +22,7 @@ export default class Dep {
         }
     }
 
-    // 添加依赖
+    // 提醒更新
     notify () {
         var subs = this.subs.slice();
 

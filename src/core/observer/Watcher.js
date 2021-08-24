@@ -4,7 +4,6 @@ import Dep from './Dep';
 var uid = 0;
 export default class Watcher {
     constructor(target, expression, callback) {
-        console.log("我是Watcher类的构造器");
         this.id = uid++
         this.target = target
         this.getter = parsePath(expression)
@@ -18,6 +17,7 @@ export default class Watcher {
 
     get () {
         // 进入依赖收集阶段
+        // Dep.target：全局属性，用于指向某一个watcher，用完即丢
         Dep.target = this
 
         var obj = this.target

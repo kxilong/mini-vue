@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script type="module">
+        import mustache from './lib/mustache.js'
+        var templateStr = '<h1>我买了一个{{thing}}, 好{{mood}}</h1>'
+
+        var data = {
+            thing: '华为手机',
+            mood: '开心'
+        }
+
+        function render(templateStr, data) {
+            return templateStr.replace(/\{\{(\w+)\}\}/g, function (a, b, c) {
+                return data[b]
+            })
+        }
+
+        console.log(render(templateStr, data));
+        console.log(mustache);
+    </script>
+</body>
+
+</html>

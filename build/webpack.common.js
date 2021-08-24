@@ -8,7 +8,8 @@ module.exports = {
     output: {
         path: Path.resolve(__dirname, '../dist'),
         // 输出文件名
-        filename: 'static/js/[hash:8].js'
+        filename: 'static/js/[hash:8].js',
+        libraryTarget: "umd"
     },
     module: {
         rules: [{
