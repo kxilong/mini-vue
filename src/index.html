@@ -4,10 +4,70 @@
 <head>
     <meta charset="utf-8">
     <title>Mini-Vue</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .container .wrap {
+            width: 100%;
+            background: url('https://z3.ax1x.com/2021/09/24/4DRTyD.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin-top: 20px;
+        }
+
+        .list {
+            width: 100%;
+            padding: 40px 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 84%;
+            margin: 0 auto;
+        }
+
+        img {
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="root"></div>
+    <!-- <div id="container">
+        <button id="btn">按我改变DOM</button>
+    </div>
+    <div id="root"></div> -->
+    <div class="container">
+        <div class="wrap">
+            <div class="list">
+                1111
+                <img src="../static/hsh.png" />
+                <img src="../static/hsh.png" />
+                <img src="../static/hsh.png" />
+                <img src="../static/hsh.png" />
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

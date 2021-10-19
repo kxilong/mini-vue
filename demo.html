@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:0px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            height: 500px;
+        }
+
+        .background-test {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background: url('https://p1.meituan.net/1440.590/codeman/d2ab674fa0e4c875865e524d82fe15a34372569.png') no-repeat;
+            color: #000
+        }
+
+        .background-test::before {
+            content: '';
+            background-color: pink;
+            position: absolute;
+            color: #fff;
+            bottom: 0;
+            top: 590px;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            height: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background-test">
+            111111111111111
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
+
+</html>
